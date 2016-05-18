@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="###���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������
-1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workb">
+<meta name="description" content="���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workbook.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python����excel(1)">
-<meta property="og:url" content="http://vrprior.com/2016/05/18/python处理excel(1)/index.html">
+<meta property="og:title" content="python read excel(1)">
+<meta property="og:url" content="http://vrprior.com/2016/05/18/python read excel(1)/index.html">
 <meta property="og:site_name" content="Shuyi">
-<meta property="og:description" content="###���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������
-1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workb">
-<meta property="og:updated_time" content="2016-05-18T10:45:50.664Z">
+<meta property="og:description" content="���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workbook.">
+<meta property="og:updated_time" content="2016-05-18T10:48:16.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python����excel(1)">
-<meta name="twitter:description" content="###���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������
-1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workb">
+<meta name="twitter:title" content="python read excel(1)">
+<meta name="twitter:description" content="���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������1234567891011121314151617181920212223#coding=utf8import xlrddef read_excel():    workbook = xlrd.open_workbook(&apos;demo.xlsx&apos;)    sheet2 = workbook.">
 
 
 
@@ -114,7 +111,7 @@
   };
 </script>
 
-  <title> python����excel(1) | Shuyi </title>
+  <title> python read excel(1) | Shuyi </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +251,7 @@
             
             
               
-                python����excel(1)
+                python read excel(1)
               
             
           </h1>
@@ -277,8 +274,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/18/python处理excel(1)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/python处理excel(1)/" itemprop="commentsCount"></span>
+                <a href="/2016/05/18/python read excel(1)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/python read excel(1)/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -301,8 +298,7 @@
       
 
       
-        <p>###���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf8</span></span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_excel</span><span class="params">()</span>:</span></span><br><span class="line">    workbook = xlrd.open_workbook(<span class="string">'demo.xlsx'</span>)</span><br><span class="line">    sheet2 = workbook.sheet_by_index(<span class="number">1</span>) <span class="comment"># sheet������0��ʼ</span></span><br><span class="line">    rowNum = sheet2.nrows</span><br><span class="line">    colNum = sheet2.ncols</span><br><span class="line">    </span><br><span class="line">    llst = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rowNum):</span><br><span class="line">        lst = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(colNum):</span><br><span class="line">            lst.append(sheet2.cell_value(i, j))</span><br><span class="line">        llst.append(lst)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rowNum):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(colNum):</span><br><span class="line">            <span class="keyword">print</span> llst[i][j],<span class="string">'\t\t'</span>,</span><br><span class="line">        <span class="keyword">print</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    read_excel()</span><br></pre></td></tr></table></figure>
+        <h3 id="���ܣ���ȡһ��excel���j�2��sheet������sheet������o��������"><a href="#���ܣ���ȡһ��excel���j�2��sheet������sheet������o��������" class="headerlink" title="���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������"></a>���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf8</span></span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_excel</span><span class="params">()</span>:</span></span><br><span class="line">    workbook = xlrd.open_workbook(<span class="string">'demo.xlsx'</span>)</span><br><span class="line">    sheet2 = workbook.sheet_by_index(<span class="number">1</span>) <span class="comment"># sheet������0��ʼ</span></span><br><span class="line">    rowNum = sheet2.nrows</span><br><span class="line">    colNum = sheet2.ncols</span><br><span class="line">    </span><br><span class="line">    llst = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rowNum):</span><br><span class="line">        lst = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(colNum):</span><br><span class="line">            lst.append(sheet2.cell_value(i, j))</span><br><span class="line">        llst.append(lst)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(rowNum):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(colNum):</span><br><span class="line">            <span class="keyword">print</span> llst[i][j],<span class="string">'\t\t'</span>,</span><br><span class="line">        <span class="keyword">print</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    read_excel()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -359,8 +355,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/18/python处理excel(1)/"
-           data-title="python����excel(1)" data-url="http://vrprior.com/2016/05/18/python处理excel(1)/">
+      <div class="ds-thread" data-thread-key="2016/05/18/python read excel(1)/"
+           data-title="python read excel(1)" data-url="http://vrprior.com/2016/05/18/python read excel(1)/">
       </div>
     
   </div>
@@ -437,7 +433,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#���ܣ���ȡһ��excel���j�2��sheet������sheet������o��������"><span class="nav-number">1.</span> <span class="nav-text">���ܣ���ȡһ��excel���ĵ�2��sheet������sheet������ȫ��������</span></a></li></ol></div>
             
           </div>
         </section>
