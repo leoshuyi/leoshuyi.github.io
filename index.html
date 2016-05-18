@@ -253,6 +253,106 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/18/select server/" itemprop="url">
+                  Server using select
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T18:02:48+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/18/select server/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/select server/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERR_EXIT(m) \</span><br><span class="line">    do &#123; \</span><br><span class="line">        perror(m); \</span><br><span class="line">        exit(EXIT_FAILURE); \</span><br><span class="line">    &#125; while (0)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    signal(SIGPIPE, SIG_IGN);</span><br><span class="line">    <span class="keyword">int</span> listenfd; <span class="comment">//被动套接字(文件描述符），即只可以accept, 监听套接字</span></span><br><span class="line">    <span class="keyword">if</span> ((listenfd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP)) &lt; <span class="number">0</span>)</span><br><span class="line"><span class="comment">//  listenfd = socket(AF_INET, SOCK_STREAM, 0)  </span></span><br><span class="line">        ERR_EXIT(<span class="string">"socket error"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">struct</span> sockaddr_in servaddr;</span><br><span class="line">    <span class="built_in">memset</span>(&amp;servaddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(servaddr));</span><br><span class="line">    servaddr.sin_family = AF_INET;</span><br><span class="line">    servaddr.sin_port = htons(<span class="number">5188</span>);</span><br><span class="line">    servaddr.sin_addr.s_addr = htonl(INADDR_ANY); </span><br><span class="line">    <span class="comment">/* servaddr.sin_addr.s_addr = inet_addr("127.0.0.1"); */</span></span><br><span class="line">    <span class="comment">/* inet_aton("127.0.0.1", &amp;servaddr.sin_addr); */</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> on = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &amp;on, sizeof(on)) &lt; <span class="number">0</span>)</span><br><span class="line">        ERR_EXIT(<span class="string">"setsockopt error"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (bind(listenfd, (struct sockaddr*)&amp;servaddr,sizeof(servaddr)) &lt; <span class="number">0</span>)</span><br><span class="line">        ERR_EXIT(<span class="string">"bind error"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (listen(listenfd, SOMAXCONN) &lt; <span class="number">0</span>) <span class="comment">//listen应在socket和bind之后，而在accept之前</span></span><br><span class="line">        ERR_EXIT(<span class="string">"listen error"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">struct</span> sockaddr_in peeraddr; <span class="comment">//传出参数</span></span><br><span class="line">    <span class="keyword">socklen_t</span> peerlen = <span class="keyword">sizeof</span>(peeraddr); <span class="comment">//传入传出参数，必须有初始值</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> conn; <span class="comment">// 已连接套接字(变为主动套接字，即可以主动connect)</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> client[FD_SETSIZE];</span><br><span class="line">    <span class="keyword">int</span> maxi = <span class="number">0</span>; <span class="comment">// client数组中最大不空闲位置的下标</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; FD_SETSIZE; i++)</span><br><span class="line">        client[i] = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> nready;</span><br><span class="line">    <span class="keyword">int</span> maxfd = listenfd;</span><br><span class="line">    fd_set rset;</span><br><span class="line">    fd_set allset;</span><br><span class="line">    FD_ZERO(&amp;rset);</span><br><span class="line">    FD_ZERO(&amp;allset);</span><br><span class="line">    FD_SET(listenfd, &amp;allset);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        rset = allset;</span><br><span class="line">        nready = select(maxfd + <span class="number">1</span>, &amp;rset, NULL, NULL, NULL);</span><br><span class="line">        <span class="keyword">if</span> (nready == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (errno == EINTR)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            ERR_EXIT(<span class="string">"select error"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (nready == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(listenfd, &amp;rset)) &#123;</span><br><span class="line">        </span><br><span class="line">            conn = accept(listenfd, (struct sockaddr*)&amp;peeraddr, &amp;peerlen);  <span class="comment">//accept不再阻塞</span></span><br><span class="line">            <span class="keyword">if</span> (conn == <span class="number">-1</span>)</span><br><span class="line">                ERR_EXIT(<span class="string">"accept error"</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; FD_SETSIZE; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (client[i] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    client[i] = conn;</span><br><span class="line">                    <span class="keyword">if</span> (i &gt; maxi)</span><br><span class="line">                        maxi = i;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (i == FD_SETSIZE) &#123;</span><br><span class="line">                <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"too many clients\n"</span>);</span><br><span class="line">                <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"recv connect ip=%s port=%d\n"</span>, inet_ntoa(peeraddr.sin_addr),</span><br><span class="line">                ntohs(peeraddr.sin_port));</span><br><span class="line"></span><br><span class="line">            FD_SET(conn, &amp;allset);</span><br><span class="line">            <span class="keyword">if</span> (conn &gt; maxfd)</span><br><span class="line">                maxfd = conn;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (--nready &lt;= <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= maxi; i++) &#123;</span><br><span class="line">            conn = client[i];</span><br><span class="line">            <span class="keyword">if</span> (conn == <span class="number">-1</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (FD_ISSET(conn, &amp;rset)) &#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">char</span> recvbuf[<span class="number">1024</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">                <span class="keyword">int</span> ret = read(conn, recvbuf, <span class="number">1024</span>);</span><br><span class="line">                <span class="keyword">if</span> (ret == <span class="number">-1</span>)</span><br><span class="line">                    ERR_EXIT(<span class="string">"readline error"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (ret  == <span class="number">0</span>) &#123; <span class="comment">//客户端关闭 </span></span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"client close \n"</span>);</span><br><span class="line">                    FD_CLR(conn, &amp;allset);</span><br><span class="line">                    client[i] = <span class="number">-1</span>;</span><br><span class="line">                    close(conn);</span><br><span class="line">                &#125;</span><br><span class="line">        </span><br><span class="line">                <span class="built_in">fputs</span>(recvbuf, <span class="built_in">stdout</span>);</span><br><span class="line">                write(conn, recvbuf, <span class="built_in">strlen</span>(recvbuf));</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> (--nready &lt;= <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">break</span>; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/18/python处理excel（一）：读/" itemprop="url">
                   python处理excel（一）：读
                 </a>
@@ -686,7 +786,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
