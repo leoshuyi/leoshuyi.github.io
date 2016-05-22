@@ -253,6 +253,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/22/What is p99 latency/" itemprop="url">
+                  What is p99 latency?
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-22T23:16:48+08:00" content="2016-05-22">
+              2016-05-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/22/What is p99 latency/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/22/What is p99 latency/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>It’s the upper bound of latencies experienced by 99% of flows (e.g., TCP flows, HTTP requests, RPCs, …). In other words, 99% of the flows are experiencing less than the p99 (aka 99th-percentile) latency. </p>
+<p>Why is it used?<br>In most applications, we want to minimize tail latencies, which correspond to the worst user experience. Now, given that we have roughly 1% noise in our measurements (like network congestions, outages, service degradations), the p99 latency is a good representative of practically the worst case. And, almost always, our goal is to reduce the p99 latency.</p>
+<p>Let me give you an example. Let say you have a web app that its data is stored in a persistent DB and is also partly cached in memory. If you answer 90% of the requests from the cache, but 10% from the persistent DB, the p99 latency is determined by the DB’s latency. At this stage, you need to work on your DB design and caching strategy to improve p99, otherwise you’ll get lots of complaints from your customers (end-users or other developers in your team).</p>
+<p><a href="https://www.quora.com/What-is-p99-latency" target="_blank" rel="external">Reference here.</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/22/High Scalability/" itemprop="url">
                   Hign Scalability
                 </a>
@@ -709,110 +813,6 @@
             <h2 id="You-know-that-I-love-you"><a href="#You-know-that-I-love-you" class="headerlink" title="You know that I love you."></a>You know that I love you.</h2><blockquote>
 <p>Always.</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/15/What is p99 latency/" itemprop="url">
-                  What is p99 latency?
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-15T11:02:48+08:00" content="2016-05-15">
-              2016-05-15
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/15/What is p99 latency/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/15/What is p99 latency/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>It’s the upper bound of latencies experienced by 99% of flows (e.g., TCP flows, HTTP requests, RPCs, …). In other words, 99% of the flows are experiencing less than the p99 (aka 99th-percentile) latency. </p>
-<p>Why is it used?<br>In most applications, we want to minimize tail latencies, which correspond to the worst user experience. Now, given that we have roughly 1% noise in our measurements (like network congestions, outages, service degradations), the p99 latency is a good representative of practically the worst case. And, almost always, our goal is to reduce the p99 latency.</p>
-<p>Let me give you an example. Let say you have a web app that its data is stored in a persistent DB and is also partly cached in memory. If you answer 90% of the requests from the cache, but 10% from the persistent DB, the p99 latency is determined by the DB’s latency. At this stage, you need to work on your DB design and caching strategy to improve p99, otherwise you’ll get lots of complaints from your customers (end-users or other developers in your team).</p>
-<p><a href="https://www.quora.com/What-is-p99-latency" target="_blank" rel="external">Reference here.</a></p>
 
           
         
