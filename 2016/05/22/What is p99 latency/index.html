@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://vrprior.com/2016/05/22/What is p99 latency/index.html">
 <meta property="og:site_name" content="Shuyi">
 <meta property="og:description" content="It’s the upper bound of latencies experienced by 99% of flows (e.g., TCP flows, HTTP requests, RPCs, …). In other words, 99% of the flows are experiencing less than the p99 (aka 99th-percentile) laten">
-<meta property="og:updated_time" content="2016-05-22T15:16:58.787Z">
+<meta property="og:updated_time" content="2016-05-23T13:43:54.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is p99 latency?">
 <meta name="twitter:description" content="It’s the upper bound of latencies experienced by 99% of flows (e.g., TCP flows, HTTP requests, RPCs, …). In other words, 99% of the flows are experiencing less than the p99 (aka 99th-percentile) laten">
@@ -302,6 +302,7 @@
 <p>Why is it used?<br>In most applications, we want to minimize tail latencies, which correspond to the worst user experience. Now, given that we have roughly 1% noise in our measurements (like network congestions, outages, service degradations), the p99 latency is a good representative of practically the worst case. And, almost always, our goal is to reduce the p99 latency.</p>
 <p>Let me give you an example. Let say you have a web app that its data is stored in a persistent DB and is also partly cached in memory. If you answer 90% of the requests from the cache, but 10% from the persistent DB, the p99 latency is determined by the DB’s latency. At this stage, you need to work on your DB design and caching strategy to improve p99, otherwise you’ll get lots of complaints from your customers (end-users or other developers in your team).</p>
 <p><a href="https://www.quora.com/What-is-p99-latency" target="_blank" rel="external">Reference here.</a></p>
+<p><a href="http://cacm.acm.org/magazines/2013/2/160173-the-tail-at-scale/fulltext" target="_blank" rel="external">The Tail at Scale–Jeffrey Dean</a></p>
 
       
     </div>
